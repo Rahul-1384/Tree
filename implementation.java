@@ -89,8 +89,8 @@ public class implementation{
                 return;
             }
             postOrder(root.left);
-            System.out.println(root.val);
             postOrder(root.right);
+            System.out.println(root.val);
         }
 
 
