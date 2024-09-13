@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Priority {
-    public class Priority_Queue{
+    public class Priority_Queue {
         static ArrayList<Integer> data = new ArrayList<Integer>();
 
         // Inserting Element
@@ -29,20 +29,22 @@ public class Priority {
             data.set(value, data.get(data.size()-1));
             downheapify(0);
         }
-        public void downheapify(int val){
-            int idx = val;
+        public void downheapify(int pi){
+            int idx = pi;
             int leftIndx = 2*idx + 1;
             int rightIndx = 2*idx +1;
-            if(leftIndx > rightIndx){
-                idx = leftIndx;
+            if(leftIndx < data.size()-1 && leftIndx < data.get(idx)){
+                leftIndx = idx;
+            }
+            if(rightIndx < data.size()-1 && rightIndx < data.get(idx)){
+                rightIndx = idx;
             }
         }
 
     }
     public static void main(String[] args) {
-        int[] arr = {5,6,2,3,1,9};
-        for(int i=0;i<arr.length;i++){
-        }
+        Priority p = new Priority();
+        
     }
 
     
