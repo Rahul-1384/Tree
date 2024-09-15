@@ -40,7 +40,6 @@ public class Priority {
                 rightIndx = idx;
             }
         }
-
     }
     public static void main(String[] args) {
         Priority p = new Priority();
