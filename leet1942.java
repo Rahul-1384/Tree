@@ -1,3 +1,4 @@
+import java.util.*;
 class Item {
     int friend;
     int chair = -1;
