@@ -1,5 +1,5 @@
 import java.util.*;
-public class Leet2530 {
+public class leet2530 {
     public long maxKelements(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         for(int i=0;i<nums.length;i++){
