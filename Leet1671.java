@@ -2,13 +2,13 @@ import java.util.*;
 public class Leet1671 {
     public int minimumMountainRemovals(int[] nums) {
         int n = nums.length;
-        int[] inc = new int[n], dec = new int[n];
-        Arrays.fill(inc, 1);
+        int[] LIS = new int[n], dec = new int[n];
+        Arrays.fill(LIS, 1);
         Arrays.fill(dec, 1);
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < i; ++j) {
                 if (nums[i] > nums[j]) {
-                    inc[i] = Math.max(inc[i], inc[j] + 1);
+                    LIS[i] = Math.max(LIS[i], LIS[j] + 1);
                 }
             }
         }
@@ -21,8 +21,8 @@ public class Leet1671 {
         }
         int maxMountainLength = 0;
         for (int i = 1; i < n - 1; ++i) {
-            if (inc[i] > 1 && dec[i] > 1) {  // Valid peak
-                maxMountainLength = Math.max(maxMountainLength, inc[i] + dec[i] - 1);
+            if (LIS[i] > 1 && dec[i] > 1) {  // Valid peak
+                maxMountainLength = Math.max(maxMountainLength, LIS[i] + dec[i] - 1);
             }
         }
         return n - maxMountainLength;
