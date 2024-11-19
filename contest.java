@@ -1,4 +1,4 @@
-class contest {
+class contestL {
     public int countValidSelections(int[] nums) {
         int index = 0;
         int left = 0;
